@@ -1,7 +1,11 @@
+<%= @restaurant_count  %>
+
 <h1>Restaurants</h1>
 
 <ul>
   <% @restaurants.each do |restaurant| %>
-    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= link_to 'destroy', restaurant_path(restaurant), method: :delete, remote: true %>
+    </li>
   <% end %>
 </ul>
