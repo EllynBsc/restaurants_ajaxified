@@ -15,3 +15,9 @@
     <% end %>
   <% end %>
 </div>
+
+<!-- form inline to create a review -->
+<%= simple_form_for([ @restaurant, @review ]) do |f| %>
+  <%= f.input :content, as: :text %>
+  <%= f.button :submit, class: 'btn btn-primary' %>
+<% end %>
